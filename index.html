@@ -5,188 +5,314 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Gift Recommendation System</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+body{
+background:#fff4f8;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#ff2d75;
+}
+
+nav a{
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+color:#333;
+}
+
+nav a:hover{
+color:#ff2d75;
+}
+
+button{
+background:#ff2d75;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#d81b60;
+}
+
+.hero{
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:60px;
+background:linear-gradient(to right,#ffd6e5,#fff5fa);
+}
+
+.left{
+width:50%;
+}
+
+.left h1{
+font-size:48px;
+color:#222;
+}
+
+.left span{
+color:#ff2d75;
+}
+
+.left p{
+margin:20px 0;
+font-size:18px;
+line-height:30px;
+}
+
+.right img{
+width:420px;
+}
+
+.title{
+text-align:center;
+font-size:36px;
+margin:50px 0 30px;
+color:#ff2d75;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+padding:20px;
+}
+
+.card{
+width:220px;
+background:white;
+padding:25px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 0 12px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+margin:15px 0;
+color:#ff2d75;
+}
+
+.card p{
+font-size:15px;
+line-height:24px;
+}
+
+#login{
+display:none;
+}
+
+.login-box{
+width:360px;
+margin:60px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 12px rgba(0,0,0,.2);
+}
+
+.login-box input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+</style>
 
 </head>
-<body>
 
-<!-- ================= HEADER ================= -->
+<body>
 
 <header>
 
 <div class="logo">
-<i class="fa-solid fa-gift"></i>
-<h2>AI Gift Recommendation System</h2>
+🎁 AI Gift Recommendation
 </div>
 
 <nav>
 
-<a href="index.html">Home</a>
+<a href="#" onclick="home()">Home</a>
 
 <a href="#occasion">Occasions</a>
 
-<a href="#favorites">Favorites</a>
+<a href="#about">About</a>
 
-<a href="#about">About Us</a>
+<a href="#contact">Contact</a>
 
-<a href="login.html">
-<button class="login">
-<i class="fa-solid fa-user"></i> Login
+<button onclick="login()">
+Login
 </button>
-</a>
 
 </nav>
 
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- HOME -->
+
+<div id="home">
 
 <section class="hero">
 
 <div class="left">
 
-<h1>Find The Perfect Gift <br>
-<span>With The Power Of AI</span></h1>
+<h1>
+
+Find The Perfect Gift
+
+<span>With AI</span>
+
+</h1>
 
 <p>
-Discover personalized gift ideas based on age, interests,
-relationship, budget and special occasions.
+
+Discover personalized gifts based on age,
+relationship, interests and budget.
+
 </p>
 
-<a href="login.html">
-<button class="start">
-<i class="fa-solid fa-gift"></i>
+<button onclick="login()">
+
 Get Started
+
 </button>
-</a>
 
 </div>
 
 <div class="right">
 
-<img src="images/hero.png" alt="Gift">
+<img src="https://cdn-icons-png.flaticon.com/512/3159/3159066.png">
 
 </div>
 
 </section>
 
-<!-- ================= OCCASIONS ================= -->
+<h2 class="title">
+
+Why Choose Our AI?
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🤖 AI Suggestions</h3>
+
+<p>
+
+Smart recommendations based on user preferences.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💖 Personalized</h3>
+
+<p>
+
+Gift ideas for every relationship and occasion.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💰 Budget Friendly</h3>
+
+<p>
+
+Find gifts that fit your budget.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🛒 Easy Shopping</h3>
+
+<p>
+
+Purchase gifts using online shopping links.
+
+</p>
+
+</div>
+
+</div>
 
 <section id="occasion">
 
-<h2 class="title">Explore Gifts By Occasion</h2>
+<h2 class="title">
+
+Gift Occasions
+
+</h2>
 
 <div class="cards">
 
 <div class="card">
-<div class="icon">🎂</div>
-<h3>Birthday</h3>
-<p>Find the best birthday gifts.</p>
-<button>Explore</button>
+<h3>🎂 Birthday</h3>
+<p>Special birthday gifts.</p>
 </div>
 
 <div class="card">
-<div class="icon">❤️</div>
-<h3>Anniversary</h3>
-<p>Romantic gifts for couples.</p>
-<button>Explore</button>
+<h3>❤️ Anniversary</h3>
+<p>Romantic surprises.</p>
 </div>
 
 <div class="card">
-<div class="icon">🎁</div>
-<h3>Festival</h3>
+<h3>🎁 Festival</h3>
 <p>Celebrate every festival.</p>
-<button>Explore</button>
 </div>
 
 <div class="card">
-<div class="icon">🎓</div>
-<h3>Graduation</h3>
-<p>Perfect graduation gifts.</p>
-<button>Explore</button>
+<h3>🎓 Graduation</h3>
+<p>Congratulate success.</p>
 </div>
 
 </div>
 
 </section>
-
-<!-- ================= FAVORITES ================= -->
-
-<section id="favorites">
-
-<h2 class="title">Why Choose Us?</h2>
-
-<div class="cards">
-
-<div class="card">
-<i class="fa-solid fa-heart fa-3x"></i>
-
-<h3>Save Favorites</h3>
-
-<p>
-Store your favorite gifts for future purchase.
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-wand-magic-sparkles fa-3x"></i>
-
-<h3>AI Recommendation</h3>
-
-<p>
-Smart recommendations based on your preferences.
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-cart-shopping fa-3x"></i>
-
-<h3>Easy Purchase</h3>
-
-<p>
-Buy gifts directly using Amazon shopping links.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-<h2 class="title">About Us</h2>
-
-<p class="about">
-
-AI Gift Recommendation System is an intelligent web application
-that helps users discover personalized gifts using Artificial
-Intelligence. Simply select the occasion, enter recipient
-details and receive the most suitable gift suggestions within
-seconds.
-
-</p>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-<p>
-© 2026 AI Gift Recommendation System | All Rights Reserved
-</p>
-
-</footer>
-
-</body>
-</html>
